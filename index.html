@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#4b64f2">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <link href="./style.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"
+        integrity="sha512-rmZcZsyhe0/MAjquhTgiUcb4d9knaFc7b5xAfju483gbEXTkeJRUMIPk6s3ySZMYUHEcjKbjLjyddGWMrNEvZg=="
+        crossorigin="anonymous"></script>
+    <title>Märkmeid | Notes</title>
+</head>
+
+<body translate="no" class="no-select">
+
+    <div id="app">
+        <!--navbar-->
+        <div class="wxnavbar">
+            <div class="wxnavbar__titlebox">
+                <h3 class="wxnavbar__titlebox--title">Märkmeid</h3>
+            </div>
+            <div class="wxnavbar__widgets">
+                <!-- <div title="Search" class="wxnavbar__widget--iconview">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+                        <path d="M0 0h24v24H0z" fill="none" />
+                        <path
+                            d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" />
+                    </svg>
+                </div> -->
+                <div title="Settings" class="wxnavbar__widget--iconview">
+                    <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24"
+                        viewBox="0 0 24 24" width="24">
+                        <g>
+                            <path d="M0,0h24v24H0V0z" fill="none" />
+                            <path
+                                d="M19.14,12.94c0.04-0.3,0.06-0.61,0.06-0.94c0-0.32-0.02-0.64-0.07-0.94l2.03-1.58c0.18-0.14,0.23-0.41,0.12-0.61 l-1.92-3.32c-0.12-0.22-0.37-0.29-0.59-0.22l-2.39,0.96c-0.5-0.38-1.03-0.7-1.62-0.94L14.4,2.81c-0.04-0.24-0.24-0.41-0.48-0.41 h-3.84c-0.24,0-0.43,0.17-0.47,0.41L9.25,5.35C8.66,5.59,8.12,5.92,7.63,6.29L5.24,5.33c-0.22-0.08-0.47,0-0.59,0.22L2.74,8.87 C2.62,9.08,2.66,9.34,2.86,9.48l2.03,1.58C4.84,11.36,4.8,11.69,4.8,12s0.02,0.64,0.07,0.94l-2.03,1.58 c-0.18,0.14-0.23,0.41-0.12,0.61l1.92,3.32c0.12,0.22,0.37,0.29,0.59,0.22l2.39-0.96c0.5,0.38,1.03,0.7,1.62,0.94l0.36,2.54 c0.05,0.24,0.24,0.41,0.48,0.41h3.84c0.24,0,0.44-0.17,0.47-0.41l0.36-2.54c0.59-0.24,1.13-0.56,1.62-0.94l2.39,0.96 c0.22,0.08,0.47,0,0.59-0.22l1.92-3.32c0.12-0.22,0.07-0.47-0.12-0.61L19.14,12.94z M12,15.6c-1.98,0-3.6-1.62-3.6-3.6 s1.62-3.6,3.6-3.6s3.6,1.62,3.6,3.6S13.98,15.6,12,15.6z" />
+                        </g>
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <!--container view-->
+        <div class="wxcontainer">
+            <div class="wxcontainer__listview">
+                <!-- <div data-itemId="0" class="wxcard">
+                    <div class="wxcard__title">
+                        <h3 class="wxcard__title--text"></h3>
+                    </div>
+                    <div class="wxcard__textview">
+                        <p class="wxcard__textview--text">
+                            
+                        </p>
+                    </div>
+                    <div class="wxcard__footerview">
+                        <p class="wxcard__footerview--smtext">3 hours ago</p>
+                        <div title="Delete" class="wxcard__iconview">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+                                <path d="M0 0h24v24H0z" fill="none" />
+                                <path
+                                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+
+        <!--compose button-->
+        <div title="compose" class="wxcomposebtn">
+            <div class="wxcomposebtn__iconview">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+                    <path d="M0 0h24v24H0z" fill="none" />
+                    <path
+                        d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z" />
+                </svg>
+            </div>
+            <span class="wxcomposebtn__title">Compose</span>
+        </div>
+
+        <!-- compose Modal -->
+        <div class="composemodal">
+            <div class="composemodal__container">
+
+                <div class="composemodal__navbar">
+                    <div id="closeModal" title="Back" class="composemodal__iconview">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+                            <path d="M0 0h24v24H0z" fill="none" />
+                            <path d="M21 11H6.83l3.58-3.59L9 6l-6 6 6 6 1.41-1.41L6.83 13H21z" />
+                        </svg>
+                    </div>
+                    <p class="composemodal__textheader"></p>
+                </div>
+
+                <div class="composemodal__formview">
+                    <form id="form" accept-charset="utf-8" autocomplete="off">
+                        <div class="composemodal__titleview">
+                            <input type="text" id="inputTitle" maxlength="25" placeholder="Your note title"
+                                class="composemodal__titleview--input">
+                        </div>
+
+                        <div class="composemodal__textview">
+                            <textarea id="inputText" placeholder="Your note content" maxlength="600" cols="50" rows="10"
+                                class="composemodal__textview--textarea"></textarea>
+                        </div>
+
+                        <div class="composemodal__widgets">
+                            <button type="submit" class="composemodal__widgets--btn">Save</button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="./app.js" defer></script>
+</body>
+
+</html>

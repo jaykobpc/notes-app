@@ -1,0 +1,365 @@
+:root {
+  --theme-color: #4b64f2;
+  --theme-darker: #4257cc;
+  --color-white: #fff;
+  --font-color: #757575;
+  --dark-100: #000;
+  --dark-200: #111;
+  --dark-300: #333;
+  --red-color: #ef5350;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+  outline: none;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+.no-select {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}
+
+.copyable-text {
+  -webkit-touch-callout: text; /* iOS Safari */
+  -webkit-user-select: text; /* Safari */
+  -khtml-user-select: text; /* Konqueror HTML */
+  -moz-user-select: text; /* Old versions of Firefox */
+  -ms-user-select: text; /* Internet Explorer/Edge */
+  user-select: text; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}
+
+/** view section */
+#app {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--color-white);
+}
+
+/** Navbar **/
+.wxnavbar {
+  background-color: var(--theme-color);
+  padding: 1.1rem 0.7rem;
+  width: 100%;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+  z-index: 999;
+  position: fixed;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.wxnavbar__titlebox {
+  margin-right: auto;
+}
+
+.wxnavbar__titlebox--title {
+  font-family: inherit;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 0.25rem;
+  color: var(--color-white);
+}
+
+.wxnavbar__widgets {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.wxnavbar__widget--iconview {
+  width: 3.5rem;
+  height: 3.5rem;
+  text-align: center;
+  padding: 0.5rem 0.3rem;
+  fill: var(--color-white);
+  border-radius: 50%;
+  margin-right: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.wxnavbar__widget--iconview:hover {
+  background-color: var(--theme-darker);
+}
+
+/** container section **/
+.wxcontainer {
+  margin-top: 6.5rem;
+  padding: 1.1rem 0.8rem;
+  overflow-y: auto;
+}
+
+.wxcontainer__listview {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 1.3rem;
+  column-gap: 1.3rem;
+  padding-bottom: 7.5rem;
+}
+
+/** Responsive mode */
+
+@media only screen and (max-width: 900px) {
+  .wxcontainer__listview {
+    grid-template-columns: none;
+  }
+}
+
+.wxcard {
+  width: 100%;
+  border: 1px solid rgb(232, 232, 240);
+  font-family: inherit;
+  padding: 1.6rem 1rem;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  transition: all 0.3s;
+}
+
+.wxcard:hover {
+  box-shadow: 1px 1px 14px 1px rgba(0, 0, 0, 0.1);
+  border: 1px solid #fff;
+}
+
+.wxcard__title--text {
+  font-size: 1.6rem;
+  font-weight: 500;
+  font-kerning: normal;
+  color: var(--dark-300);
+}
+
+.wxcard__textview {
+  padding: 0.5rem 0rem;
+  height: 5rem;
+}
+
+.wxcard__textview--text {
+  font-size: 1.4rem;
+  font-weight: 300;
+  font-family: inherit;
+  color: var(--font-color);
+}
+
+.wxcard__footerview {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0.5rem 0rem;
+}
+
+.wxcard__footerview--smtext {
+  margin-right: auto;
+  font-size: 1.3rem;
+  font-weight: 300;
+  color: var(--font-color);
+}
+
+.wxcard__iconview {
+  width: 3.5rem;
+  height: 3.5rem;
+  text-align: center;
+  padding: 0.5rem 0.3rem;
+  fill: var(--red-color);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.wxcard__iconview:hover {
+  background-color: #ffcdd2;
+}
+
+/** compose button */
+
+
+.wxcomposebtn {
+  position: fixed;
+  z-index: 999;
+  background-color: var(--color-white);
+  bottom: 3rem;
+  right: 2rem;
+  padding: 0.8rem 2rem;
+  box-shadow: 1px 2px 5px 2px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  border-radius: 5rem;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.wxcomposebtn__iconview {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  text-align: center;
+  fill: var(--theme-color);
+}
+
+.wxcomposebtn__title {
+  font-size: 1.3rem;
+  font-weight: 500;
+  letter-spacing: 0.05rem;
+  margin-left: 0.6rem;
+  color: var(--theme-color);
+}
+
+/** Compose Modal */
+
+
+.composemodal {
+  display: none;
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15));
+  z-index: 9999;
+  overflow: hidden;
+}
+
+.composemodal__container {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60rem;
+  background-color: var(--color-white);
+  border-radius: 0.5rem;
+}
+
+@media only screen and (max-width: 900px) {
+  .composemodal__container {
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+    height: 100%;
+    border-radius: none;
+  } 
+}
+
+.composemodal__navbar {
+  padding: 0.7rem 0.3rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.composemodal__textheader {
+  text-align: center;
+  flex: 1;
+  color: var(--red-color);
+  font-family: inherit;
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+
+.composemodal__iconview {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  text-align: center;
+  padding: 0.5rem 0.3rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  background-color: inherit;
+  fill: var(--font-color);
+}
+
+.composemodal__iconview:hover {
+  background-color: #dde;
+}
+
+.composemodal__formview {
+  padding: 0.5rem 1rem;
+}
+
+.composemodal__titleview--input {
+  width: 100%;
+  display: block;
+  padding: 1rem 0.5rem;
+  font-family: inherit;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  color: var(--font-color);
+  border: none;
+}
+
+.composemodal__textview--textarea {
+  width: 100%;
+  padding: 0.5rem;
+  font-family: inherit;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--font-color);
+  border: none;
+  resize: none;
+}
+
+.composemodal__widgets {
+  padding: 1rem 0rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.composemodal__widgets--btn {
+  font-family: inherit;
+  font-size: 1.4rem;
+  font-weight: 500;
+  padding: 0.8rem 2rem;
+  color: var(--color-white);
+  background-color: var(--theme-color);
+  border: none;
+  border-radius: 0.4rem;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 900px) {
+  .composemodal__widgets {
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    position: absolute;
+    padding: 2rem 0.5rem;
+  }
+  
+  .composemodal__widgets--btn {
+    width: 100%;
+    padding: 1.8rem;
+  }
+}
+
